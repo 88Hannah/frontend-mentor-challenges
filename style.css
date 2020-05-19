@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+/********************************
+* Variables
+*********************************/
+:root {
+    --font-main: 'Roboto', sans-serif;
+    --clr-grey: #505050;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--clr-grey);
+}
+
+header {
+    background: skyblue;
+    text-align: center
+}
+
+h1 {
+    font-size: 3em;
+    padding: 0.5em;
+}
+
+ol {
+    text-align: center;
+    list-style-position: inside;
+    font-size: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: rgb(189, 39, 189);
+    font-weight: 700;
+}
