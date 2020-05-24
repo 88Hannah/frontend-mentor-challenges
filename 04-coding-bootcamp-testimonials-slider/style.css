@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*********** Variable ***********/
+:root {
+
+    --clr-db: hsl(240, 38%, 20%);
+    --clr-gb: hsl(240, 18%, 77%);
+
+    --fs-quote: 32px;
+    --fs-mid: 24px;
+    --fs-mobile: 18px;
+    --ff-std: 'Inter', sans-serif;
+    --fw-lt: 300;
+    --fw-std: 500;
+    --fw-bd: 700;
+
+}
+
+/********** Styling ************/
+body {
+    font-family: var(--ff-std);
+}
+
+.container {
+    background: url("images/pattern-curve.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 70px;
+    padding-bottom: 50px;
+    width: 375px;
+    margin: 50px auto;
+    
+}
+
+.imgNbtn {
+    background: url("images/pattern-bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 375px;
+    height: 330px;
+    padding: 32px 0 0;  
+}
+
+.photo {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+.clickers {
+    width: 80px;
+    height: 38px;
+    border-radius: 19px;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: -19px;
+    left: calc(50% - 40px); 
+}
+
+.clickers:before {
+    content: " ";
+    background: var(--clr-gb);
+    width: 80px;
+    height: 39px;
+    border-radius: 19px;
+    position: absolute;
+    z-index: -1;
+    left: -80%;
+    top: -40%;
+    box-shadow: 10px 1px 20px 20px var(--clr-gb), 10px 1px 40px 30px var(--clr-gb);
+    opacity: 0.5;
+}
+
+.click {
+    box-sizing: content-box;
+    padding: 10px;
+    stroke:#8585AC;
+    transition: transform 0.5s ease-out;  
+}
+
+.left:hover, .right:hover {
+    stroke: red;
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+.text {
+    text-align: center;
+    background: url("images/pattern-quotes.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 50px;
+    padding: 30px 20px;
+    margin-top: 20px;
+}
+
+.quote {
+    font-size: var(--fs-mobile);
+    font-weight: var(--fw-lt);
+    color: var(--clr-db);
+    padding-bottom: 20px;
+}
+
+.author {
+    font-size: 12px;
+}
+
+.name {
+    font-weight: var(--fw-bd);
+    color: var(--clr-db);
+}
+
+.job {
+    font-weight: var(--fw-lt);
+    color: var(--clr-gb);
+}
+
+.name, .job {
+    display: block;
+}
+
+
+/************* Media queries ************/
+
+@media (min-width: 900px) {
+
+    .container {
+        background-position: left bottom;
+        background-size: 40% 20%;
+        width: 900px;
+    }
+
+    .testimonial {
+        display: flex;
+        padding-right: 3em;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .imgNbtn {
+        order: 2;
+        width: 50%;
+        height: auto;
+        padding: 32px 0 0;
+    }
+
+
+    .text {
+        text-align: left;
+        width: 50%;
+        padding: 30px 0 0;
+        margin-top: 0;
+        position: relative;
+        left: 120px;
+        background-position: 80px top;
+        background-size: 5em;
+    }
+
+    .quote {
+        font-size: var(--fs-mid);
+    }
+    
+    .author {
+        font-size: 14px;
+    }
+
+    .name, .job {
+        display: inline-block;
+    }
+
+    .job {
+        margin-left: 0.5em;
+    }
+
+    .clickers {
+        left: calc(30% - 40px);        
+    }
+    
+    .clickers:before {
+        left: 0%;
+    }
+}
+
+
+@media (min-width: 1400px) {
+
+    .container {
+        width: 1440px;
+    }
+
+    .photo {
+        padding: 26px 0 0;
+    }
+
+    .text {
+        width: 45%;
+        padding: 70px 0 0;
+        left: 140px;
+        background-size: 7em;
+    }
+
+    .quote {
+        font-size: var(--fs-quote);
+    }
+    
+    .author {
+        font-size: 20px;
+    }
+
+    .clickers {
+        width: 120px;
+        height: 64px;
+        border-radius: 32px;
+        padding: 10px 0;
+        top: -32px;
+        left: calc(30% - 60px);
+        
+    }
+
+    .clickers:before {
+        top: -20%;
+        border-radius: 32px;
+        width: 120px;
+        height: 62px;
+    }
+
+    /* .click {
+        width: 30%;
+        padding: 10px;
+    } */
+
+}
+
+    .attribution { font-size: 11px; text-align: center; margin-bottom: 20px; }
+    .attribution a { color: hsl(228, 45%, 44%); }
