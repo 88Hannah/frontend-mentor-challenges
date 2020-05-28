@@ -3,24 +3,151 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HS - Frontend Mentor challenges</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <title>Front End Challenges</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/site.webmanifest">
+
+
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
 
-
+    </head>
+    
     <body>
-        </head>
-
+        
         <header>
-            <h1>Challenges completed on Frontend Mentor</h1>
+
+            <div class="container">
+                <div class="container__left">
+                    <a class="logo-link" href="#"><img class="nav__logo" src="images/logo-light-grey.png" alt=""></a>
+                    <!-- <div class="arrow-container">
+                        <div class="arrow arrow-1"></div>
+                        <div class="arrow arrow-2"></div>
+                        <div class="arrow arrow-3"></div>
+                        <div class="arrow arrow-4"></div>
+                        <div class="arrow-head"></div>
+                    </div> -->
+
+                </div>
+                <div class="container__right">
+                    <h1>Front<br>End<br>Web<br>Developer<br>Chalenges</h1>
+                    <h6>Sourced from</h6>
+                    <a class="container__fm-link" href="https://www.frontendmentor.io/" target="blank" ><img class="fm-logo" src="images/fm-logo.png" alt="Frontend Mentor's logo"></a>
+                </div>
+            </div>
+
         </header>
 
-        <section>
-            <ol>
-                <a href="01 - single price grid component/01-single-price-grid-component.html"><li>Single price grid component</li></a>
-                <a href="02-four-card-feature-section/02-four-card-feature-section.html"><li>Four card feature section</li></a>
-                <a href="03-huddle-landing-page/03-huddle-landing-page.html"><li>Huddle landing page</li></a>
-                <a href="04-coding-bootcamp-testimonials-slider/index.html"><li>Coding bootcamp testimonials</li></a>
+
+        <section class="intro">
+            <div class="intro__text">
+                <p>After completing several courses in HTML and CSS I was looking for ways to practise my new skills. 
+                Whilst searching I stumbled across <a href="https://www.frontendmentor.io/" target="blank"><strong>Frontend Mentor</strong></a> who provide a large selection of free and paid-for challenges to help improve your front end development skills. 
+                They have a variety difficulty levels which cater for a wide range of abilities.</p>
+
+                <p>Below are the links to all of the challenges that I have completed.</p>
+                    
+                <!-- <p>If you would like to see some of the other projects that I have been working on then visit <a href="#"><strong>my portfolio</strong></a> page.</p> -->
+            </div>
         </section>
+
+
+        <section class="challenges">
+            <div class="challenges__grid">
+
+                <div class="grid__item">
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card__face card__face--front">
+                                <img class="card__img" src="images/challenge-01.png" alt="">
+                                <p class="card__name">Single price grid component</p>
+                            </div>
+                            <div class="card__face card__face--back">
+                                <a class="card__solution-link" href="01 - single price grid component/01-single-price-grid-component.html">
+                                    <div class="btn">My solution</div>
+                                </a>
+                                <a class="card__challenge-link" href="https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc" target="blank">
+                                    <div class="btn">Original challenge</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grid__item">
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card__face card__face--front">
+                                <img class="card__img" src="images/challenge-02.png" alt="">
+                                <p class="card__name">Four card feature section</p>
+                            </div>
+                            <div class="card__face card__face--back">
+                                <a class="card__solution-link" href="02-four-card-feature-section/02-four-card-feature-section.html">
+                                    <div class="btn">My solution</div>
+                                </a>
+                                <a class="card__challenge-link" href="https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK" target="blank">
+                                    <div class="btn">Original challenge</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grid__item">
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card__face card__face--front">
+                                <img class="card__img" src="images/challenge-03.png" alt="">
+                                <p class="card__name">Huddle landing page</p>
+                            </div>
+                            <div class="card__face card__face--back">
+                                <a class="card__solution-link" href="03-huddle-landing-page/03-huddle-landing-page.html">
+                                    <div class="btn">My solution</div>
+                                </a>
+                                <a class="card__challenge-link" href="https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100" target="blank">
+                                    <div class="btn">Original challenge</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grid__item">
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card__face card__face--front">
+                                <img class="card__img" src="images/challenge-04.png" alt="">
+                                <p class="card__name">Coding bootcamp testimonials</p>
+                            </div>
+                            <div class="card__face card__face--back">
+                                <a class="card__solution-link" href="04-coding-bootcamp-testimonials-slider/index.html">
+                                    <div class="btn">My solution</div>
+                                </a>
+                                <a class="card__challenge-link" href="https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL" target="blank">
+                                    <div class="btn">Original challenge</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <footer>
+            <a class="footer__link" href="#"><img class="footer__logo" src="images/logo-light-grey.png" alt=""></a>
+        </footer>
+
+
+    <script src="script.js"></script>
+    
     </body>
 </html>

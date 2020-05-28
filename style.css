@@ -1,34 +1,34 @@
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /********************************
 * Variables
 *********************************/
 :root {
-    --font-main: 'Roboto', sans-serif;
-    --clr-grey: #505050;
+    --clr-main: #ff9000;
+    --clr-light: #e8e8e8; 
+    --clr-links: #3f54a3;
+    --clr-dark: #707070;
+
+    --ff-head: 'Anton', sans-serif;
+    --ff-main: 'Roboto', sans-serif;
+
+    --fs-small: 18px;
+    --fs-large: 22px;
+
+    --fw-std: 400;
+    --fw-bd: 700;
 }
 
 body {
-    font-family: var(--font-main);
-    color: var(--clr-grey);
-}
-
-header {
-    background: skyblue;
-    text-align: center
-}
-
-h1 {
-    font-size: 3em;
-    padding: 0.5em;
-}
-
-ol {
-    text-align: center;
-    list-style-position: inside;
-    font-size: 1.5em;
+    font-family: var(--ff-main);
+    background-color: var(--clr-light);
+    font-size: var(--fs-small);
 }
 
 a {
@@ -37,6 +37,269 @@ a {
 }
 
 a:hover {
-    color: rgb(189, 39, 189);
-    font-weight: 700;
+    color: var(--clr-links);
+}
+
+header {
+    font-family: var(--ff-head);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;  
+}
+
+.container__left {
+    min-width: 30%;
+    max-width: 40%;
+    background-color: var(--clr-main);
+    align-self: stretch;
+    flex-grow: 2;
+    position: relative;
+}
+
+.nav__logo,
+.footer__logo {
+    display: block;
+    width: 100px;
+    padding: 0.5em;
+    margin: 0 auto;
+}
+
+/******ARROW FUNCTIONALITY******/
+/* .arrow-container {
+    width: 100%;
+    position: absolute;
+    animation-name: move-arrow;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes move-arrow {
+    0% {bottom: 6em}
+    90% {bottom: 2em}
+    100% {bottom: 6em}
+
+}
+
+.arrow {
+    background-color: var(--clr-light);
+    margin: 1.5em auto 0;
+}
+
+.arrow-1 {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.arrow-2 {
+    width: 1.5em;
+    height: 2em;
+}
+
+.arrow-3 {
+    width: 1.5em;
+    height: 2.5em;
+}
+
+.arrow-4 {
+    width: 1.5em;
+    height: 3em;
+}
+
+.arrow-head {
+    width: 0;
+    height: 0;
+    border-top: solid 3em var(--clr-light);
+    border-left: solid 3em transparent;
+    border-right: solid 3em transparent;
+    margin: 0 auto;
+} */
+
+
+.container__right {
+    align-self: center;
+    flex-grow: 1;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    line-height: 3.2em;
+    color: var(--clr-main);
+    padding: 1em;
+}
+
+.fm-logo {
+    width: 200px;
+}
+
+.intro {
+    background-color: var(--clr-main);
+    padding: 1.5em;
+    color: var(--clr-light);
+    margin: 0 auto;
+}
+
+.intro__text p {
+    padding: 0.5em 0;
+    line-height: 1.5em;
+}
+
+.challenges {
+    width: 100%;
+    padding: 2em 20px;
+}
+
+.challenges__grid {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 30px;
+}
+
+.card-container {
+    width: 300px;
+    height: 300px;
+    perspective: 600px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transition-timing-function: cubic-bezier(0.55, 1.9, 0.9, 0.8);
+    transform-style: preserve-3d;
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    text-align: center;
+    font-weight: var(--fw-bd);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 3px 10px #aaa;
+}
+
+.card__face--front {
+    color: var(--clr-main);
+    font-size: 2em;
+    justify-content: center;
+}
+
+.card__name {
+    display: none;
+    /* position: absolute;
+    width: 100%; */
+}
+
+.card__face--back {
+    background: var(--clr-light);
+    font-size: 1.3em;
+    justify-content: space-evenly;
+    transform: rotateY(180deg);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--clr-main);
+    border-radius: 0.5em;
+    color: var(--clr-light);
+    padding: 0.3em;
+    box-shadow: 1px 3px 7px #da7800;
+}
+
+footer {
+    background-color: var(--clr-main);
+}
+
+
+/************************************
+* Media Queries
+************************************/
+
+
+/* For card flips */
+
+@media (hover: hover) {
+    .card-container:hover > .card {
+        transform: rotateY(180deg);
+    }
+}
+
+@media (hover: none) {
+    .card.flip {
+        transform: rotateY(180deg);
+    }
+}
+
+
+/* For screen sizes */
+@media (min-width: 500px) {
+
+    .nav__logo,
+    .footer__logo {
+        width: 180px;
+    }
+
+}
+
+
+@media (min-width: 660px) {
+
+    body {
+        font-size: var(--fs-large);
+    }
+    
+    .nav__logo,
+    .footer__logo {
+        width: 220px;
+    }
+
+    .fm-logo {
+        width: 300px;
+    }
+
+}
+
+
+@media (min-width: 1000px) {
+
+    .container, .intro, .challenges__grid {
+        width: 1000px;
+    }
+
+    .nav__logo,
+    .footer__logo {
+        width: 280px;
+    }
+
+}
+
+
+@media (min-width: 1000px) and (min-height: 850px) {
+
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    .container, .intro, .challenges__grid {
+        width: 1000px;
+        
+    }
+
+    .nav__logo,
+    .footer__logo {
+        width: 350px;
+    }
+
 }
