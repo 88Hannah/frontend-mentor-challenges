@@ -126,10 +126,10 @@ header {
     flex-grow: 1;
     text-align: right;
     text-transform: uppercase;
-    font-size: 1.4em;
+    font-size: 1.3em;
     line-height: 3.2em;
     color: var(--clr-main);
-    padding: 1em;
+    padding: 0.5em;
 }
 
 .fm-logo {
@@ -146,6 +146,7 @@ header {
 .intro__text p {
     padding: 0.5em 0;
     line-height: 1.5em;
+    text-align: justify;
 }
 
 .challenges {
@@ -218,6 +219,10 @@ header {
     box-shadow: 1px 3px 7px #da7800;
 }
 
+.btn:hover {
+    color: var(--clr-links);
+}
+
 footer {
     background-color: var(--clr-main);
 }
@@ -274,6 +279,10 @@ footer {
 
 @media (min-width: 1000px) {
 
+    .container__right {
+        font-size: 1.4em;
+    }
+    
     .container, .intro, .challenges__grid {
         width: 1000px;
     }
@@ -288,8 +297,9 @@ footer {
 
 @media (min-width: 1000px) and (min-height: 850px) {
 
-    h1 {
-        font-size: 2.5em;
+    .container__right {
+        font-size: 1.5em;
+        line-height: 3.5em;
     }
     
     .container, .intro, .challenges__grid {
