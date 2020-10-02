@@ -51,6 +51,7 @@ const retrieveIPInfo = async ip => {
         };
 
         populateFields(newData);
+
 };
 
 
@@ -59,8 +60,35 @@ const populateFields = data => {
     locationResult.innerHTML = `${data.location.city}, ${data.location.region}`;
     timezoneResult.innerHTML = `UTC ${data.location.timezone}`;
     ispResult.innerHTML = data.isp;
+
+
 };
 
 
-retrieveIPInfo("");
+const displayMap = (lat, long) => {
+    const mymap = L.map('mapid').setView([lat, long], 11);
+    var marker = L.marker([lat, long]).addTo(mymap);
+    const accessToken = 'pk.eyJ1IjoiaGFubmFoODgiLCJhIjoiY2tmc2p1NWF2MDdzMjJxdDh5cHBkcWkydyJ9.vbXECHYRthHA6OxzOcLL9A';
+    L.tileLayer(`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${accessToken}`, {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'your.mapbox.access.token'
+}).addTo(mymap);
+}
+
+
+const init = (async () => {
+    await retrieveIPInfo("");
+    const lat = newData.location.lat;
+    const long = newData.location.lng;
+    displayMap(lat, long);
+})();
+
+
+
+
+
 
