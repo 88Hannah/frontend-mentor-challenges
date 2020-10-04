@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <section class="top-section">
+      <h1>IP Address Tracker</h1>
+      <form action="">
+        <input type="text" name="ip-input" placeholder="Search for any IP address or domain">
+        <button type="submit">></button>
+      </form>
+      <div class="ip-results">
+        <div class="address result">
+          <h2>IP Address</h2>
+          <p class="address-result"></p>
+        </div>
+        <div class="location result">
+          <h2>Location</h2>
+          <p class="location-result"></p>
+        </div>
+        <div class="timezone result">
+          <h2>Timezone</h2>
+          <p class="timezone-result"></p>
+        </div>
+        <div class="isp result">
+          <h2>ISP</h2>
+          <p class="isp-result"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-container">
+      <div id="mapid"></div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
