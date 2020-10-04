@@ -2,48 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
     <title>Frontend Mentor | IP Address Tracker</title>
 
-    
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
-            <!-- Leaflet JS -->
-            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-            crossorigin=""></script>
-
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
 
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
 
-    <section>
+    <section class="top-section">
       <h1>IP Address Tracker</h1>
       <form action="">
         <input type="text" name="ip-input" placeholder="Search for any IP address or domain">
         <button type="submit">></button>
       </form>
       <div class="ip-results">
-        <div class="address">
+        <div class="address result">
           <h2>IP Address</h2>
           <p class="address-result"></p>
         </div>
-        <div class="location">
+        <div class="location result">
           <h2>Location</h2>
           <p class="location-result"></p>
         </div>
-        <div class="timezone">
+        <div class="timezone result">
           <h2>Timezone</h2>
           <p class="timezone-result"></p>
         </div>
-        <div class="isp">
+        <div class="isp result">
           <h2>ISP</h2>
           <p class="isp-result"></p>
         </div>
@@ -53,15 +53,6 @@
     <section class="map-container">
       <div id="mapid"></div>
     </section>
-
-    <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-    </div>
-
-
-
-
 
     <script src="script.js"></script>
   </body>
